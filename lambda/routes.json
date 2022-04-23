@@ -1,0 +1,37 @@
+{
+    "openapi": "3.0.1",
+    "info": {
+        "title": "My API",
+        "version": "1.0.0"
+    },
+    "paths": {
+        "/items": {
+            "get": {
+                "operationId": "getAll",
+                "responses": {
+                    "200": {
+                        "description": "ok"
+                    }
+                }
+            }
+        },
+        "/items/{id}": {
+            "get": {
+                "operationId": "getOne",
+                "responses": {
+                    "200": {
+                        "description": "ok"
+                    }
+                }
+            },
+            "parameters": [{
+                "name": "id",
+                "in": "path",
+                "required": true,
+                "schema": {
+                    "type": "integer"
+                }
+            }]
+        }
+    }
+}
